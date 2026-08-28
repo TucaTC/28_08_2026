@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+
+<h2>Resultado</h2>
+
+<?php
+
+//Verificar se dados foram enviados para outra página
+if(isset($_GET["nome"]) && isset($_POST["idade"]))
+{
+    $nomeGet = $_GET["nome"];
+    $idadeGet = $_POST["idade"];
+    $nota1Get = $_POST["nota1"];
+    $nota2Get = $_POST["nota2"];
+    $nota3Get = $_POST["nota3"];   
+}
+//Verificar se dados foram enviados para outra página
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $nomePost = $_POST["nome"];
+    $idadePost = $_POSTT["idade"];
+    if($idadePost < 18)
+        {
+            echo "$nomePost, você é menor de idade!";
+        }
+        else
+        {
+            echo $nomePost . ", você é maior de idade!";
+        }
+}
+?>
+
+
+<hr>
+</body>
+</html>

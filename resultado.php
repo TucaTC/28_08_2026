@@ -25,13 +25,13 @@ if(isset($_POST["nome"]) && isset($_POST["idade"]) && isset($_POST["nota1"]) && 
         public function apresentar() {
             echo "Nome: $this->nome <br>Idade: $this->idade <br>Notas: " . implode(", ",$this->notas);
             if ($this->media >= 7){
-                echo "Você foi Aprovado, média: $this->media";
+                echo "<br>Você foi Aprovado, média: $this->media";
             }
             elseif ($this->media >= 5 && $this->media < 7){
-                echo "Você está de Recuperação, média: $this->media";
+                echo "<br>Você está de Recuperação, média: $this->media";
             }
             else {
-                echo "Você está de Recuperação, média: $this->media";
+                echo "<br>Você está de Recuperação, média: $this->media";
             }
         }
     }
